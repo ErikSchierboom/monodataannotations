@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+    <body>
+        <div>
+            <ul>
+                <li>
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("With [Url] attribute", "WithUrlAttribute", "Home", new { url = "http://www.imdb.com" })        
+                </li>
+                <li>
+                    @Html.ActionLink("Without [Url] attribute", "WithoutUrlAttribute", "Home", new { url = "http://www.google.com" })
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>

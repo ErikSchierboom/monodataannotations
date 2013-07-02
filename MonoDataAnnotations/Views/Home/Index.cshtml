@@ -1,0 +1,20 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "DataAnnotations in Mono";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    Please select one of the following two pages:
+</p>
+
+<ul>
+    <li>
+        @Html.ActionLink("With [Url] attribute", "WithUrlAttribute", "Home", new { url = "http://www.imdb.com" })
+    </li>
+    <li>
+        @Html.ActionLink("Without [Url] attribute", "WithoutUrlAttribute", "Home", new { url = "http://www.google.com" })
+    </li>
+</ul>
